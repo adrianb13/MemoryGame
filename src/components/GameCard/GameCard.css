@@ -1,0 +1,14 @@
+.card {
+  background: white;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin: 40px;
+  float: left;
+  width: 200px;
+  height: 300px;
+}
+.imageBox {
+  margin: 3%;
+  height: 94%;
+  width: 94%;
+}

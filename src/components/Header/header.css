@@ -1,0 +1,11 @@
+.header {
+  font-family: 'Pacifico', cursive;
+  color: purple;
+  text-align: center;
+  background: lightblue;
+  border-bottom: 1px solid purple;
+  box-shadow: inset 0px -2px 5px purple,
+    0px 1px 5px purple;
+  margin: 0 auto 10px auto;
+  padding: 15px 0 15px 0;
+}
