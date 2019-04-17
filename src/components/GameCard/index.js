@@ -1,17 +1,19 @@
 import React from "react";
 import "./GameCard.css";
 
-function GameCard(props) {
-  return (
-    <div className="card" key={props.id} onClick={props.handleClick}>
-      <div className="imageBox">
-        <img 
-          alt={props.name}
-          src={props.image1} 
-        />
+class GameCard extends React.Component {
+  render() {
+    return (
+      <div className="card" key={this.props.id} onClick={() => this.props.handleClick()}>
+        <div className="imageBox">
+          <img 
+            alt={this.props.name}
+            src={this.props.image1} 
+          />
+        </div>
       </div>
-    </div>
-  )
+    );
+  }
 }
 
 export default GameCard;

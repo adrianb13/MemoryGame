@@ -1,11 +1,11 @@
 .card {
-  background: white;
+  background: lightblue;
   border: 2px solid black;
   border-radius: 5px;
-  margin: 40px;
+  margin: 2%;
   float: left;
   width: 200px;
-  height: 300px;
+  height: 200px;
 }
 .imageBox {
   margin: 3%;
