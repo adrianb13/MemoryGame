@@ -4,9 +4,11 @@ import "./GameCard.css";
 class GameCard extends React.Component {
   render() {
     return (
-      <div className="card" key={this.props.id} onClick={() => this.props.handleClick()}>
+      <div className="card" 
+        key={this.props.id} 
+        onClick={() => this.props.handleClick()}>
         <div className="imageBox">
-          <img 
+          <img className="image"
             alt={this.props.name}
             src={this.props.image1} 
           />
