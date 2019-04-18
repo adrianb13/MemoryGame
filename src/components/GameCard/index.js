@@ -5,12 +5,12 @@ class GameCard extends React.Component {
   render() {
     return (
       <div className="card" 
-        key={this.props.id} 
-        onClick={() => this.props.handleClick()}>
+        id={this.props.id}
+        onClick={() => this.props.handleClick(this.props.id)}>
         <div className="imageBox">
           <img className="image"
             alt={this.props.name}
-            src={this.props.image1} 
+            src={this.props.image1}
           />
         </div>
       </div>

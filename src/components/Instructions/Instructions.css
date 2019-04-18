@@ -1,12 +1,18 @@
 .instructions {
   font-family: 'Pacifico', cursive;
-  color: black;
+  color: rgb(0, 0, 170);
   text-align: justify;
   background: lightblue;
   border-radius: 15px;
-  box-shadow: inset 0px -2px 5px purple,
-    0px 1px 5px purple;
-  margin: 0px auto 10px auto;
+  box-shadow: inset 0px -1px 3px magenta,
+  inset -1px 0px 3px magenta,
+  inset 0px 1px 3px magenta,
+  inset -1px 0px 3px magenta,
+    0px 1px 3px magenta,
+    0px -1px 3px magenta,
+    -1px 0px 3px magenta,
+    1px 0px 3px magenta;
+  margin: 5px auto 10px auto;
   padding: 15px;  
   width: 80%;
 }

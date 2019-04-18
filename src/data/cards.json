@@ -2,61 +2,61 @@
   {
     "id": 1,
     "name": "Card 1",
-    "image1": "../images/favicon.ico"
+    "image1": "../images/Minion1.jpg"
   },
   {
     "id": 2,
     "name": "Card 2",
-    "image1": "../images/CardBack.jpg"
+    "image1": "../images/Minion2.jpg"
   },
   {
     "id": 3,
     "name": "Card 3",
-    "image1": "../images/CardBack.jpg"
+    "image1": "../images/Minion3.jpg"
   },
   {
     "id": 4,
     "name": "Card 4",
-    "image1": "../images/CardBack.jpg"
+    "image1": "../images/Minion4.jpg"
   },
   {
     "id": 5,
     "name": "Card 5",
-    "image1": "../images/CardBack.jpg"
+    "image1": "../images/Minion5.jpg"
   },
   {
     "id": 6,
     "name": "Card 6",
-    "image1": "../images/CardBack.jpg"
+    "image1": "../images/Minion6.jpg"
   },
   {
     "id": 7,
     "name": "Card 7",
-    "image1": "../images/CardBack.jpg"
+    "image1": "../images/Minion7.jpg"
   },
   {
     "id": 8,
     "name": "Card 8",
-    "image1": "../images/CardBack.jpg"
+    "image1": "../images/Minion8.jpg"
   },
   {
     "id": 9,
     "name": "Card 9",
-    "image1": "../images/CardBack.jpg"
+    "image1": "../images/Minion9.jpg"
   },
   {
     "id": 10,
     "name": "Card 10",
-    "image1": "../images/CardBack.jpg"
+    "image1": "../images/Minion10.jpg"
   },
   {
     "id": 11,
     "name": "Card 11",
-    "image1": "../images/CardBack.jpg"
+    "image1": "../images/Minion11.jpg"
   },
   {
     "id": 12,
     "name": "Card 12",
-    "image1": "../images/CardBack.jpg"
+    "image1": "../images/Minion12.jpg"
   }
 ]
