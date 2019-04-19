@@ -1,0 +1,14 @@
+.footer {
+  font-weight: bold;
+  text-align: center;
+  background: yellow;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px blue,
+    1px -1px 3px blue,
+    -1px -1px 3px blue,
+    -1px 1px 3px blue;
+  margin: 20px auto 0px auto;
+  width: 300px;
+  height: 40px;
+  bottom: 0;
+}
