@@ -1,11 +1,23 @@
 .card {
-  background: lightblue;
-  border: 2px solid black;
-  border-radius: 5px;
-  margin: 2%;
+  background: white;
+  border: 2px solid yellow;
+  border-radius: 100px;
+  box-shadow: 1px 1px 5px yellow,
+    1px -1px 5px yellow,
+    -1px -1px 5px yellow,
+    -1px 1px 5px yellow,
+    inset 1px 1px 5px blue,
+    inset -1px 1px 5px blue,
+    inset -1px -1px 5px blue,
+    inset 1px -1px 5px blue;
+  margin: 2% 1% 2% 4%;
   float: left;
   width: 200px;
   height: 200px;
+  cursor: grab;
+}
+.card :active {
+  cursor: grabbing;
 }
 .imageBox {
   margin: 3%;
@@ -15,4 +27,5 @@
 .image {
   width: 99%;
   height: 99%;
+  border-radius: 100px;
 }
