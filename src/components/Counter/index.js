@@ -1,5 +1,6 @@
 import React from "react";
 import GameCard from "../GameCard";
+import EndGame from "../EndGame";
 import memoryCards from "../../data/cards.json";
 import "./Counter.css"
 
@@ -24,7 +25,9 @@ class Counter extends React.Component {
     score: 0,
     highScore: 0,
     cheer: "",
-    newArr: memoryCards
+    newArr: memoryCards,
+    endGame: false,
+    winner: false
   };
 
   randomizer = (memoryCards) => {
@@ -46,14 +49,23 @@ class Counter extends React.Component {
     const currCard = playcards.filter(card => card.id === id);
     const checkCard = clickedCards.filter(card => card === currCard[0].id);
 
-    console.log(currCard[0].id)
-
     if (checkCard[0] !== currCard[0].id) {
       this.setState({
-        score: this.state.score + 1,
-        cheer: "Nice Choice! Pick Again!"
+        score: this.state.score + 1
       });
       clickedCards.push(currCard[0].id);
+
+      if (this.state.score === 12) {
+        this.setState({
+          cheer: "You WIN!!! You Got ALLLLL The Minions!!!",
+          endGame: true,
+          winner: true
+        })
+      } else if (this.state.score < 12) {
+        this.setState({
+          cheer: "Nice Choice! Pick Again!"
+        })
+      }
 
       if (this.state.score >= this.state.highScore) {
         this.setState({
@@ -64,12 +76,21 @@ class Counter extends React.Component {
     } else if (checkCard[0] === currCard[0].id) {
       this.setState({
         score: 0,
-        cheer: "Aww man!!! They got you this time!"
+        cheer: "Aww man!!! They got you this time!",
+        endGame: true
       });
       clickedCards = [];
     };
     this.randomizer(this.state.newArr);
   };
+
+  newGame = () => {
+    this.setState({
+      endGame: false,
+      winner: false
+    })
+    this.randomizer(this.state.newArr);
+  }
 
   render() {
     return (
@@ -81,15 +102,24 @@ class Counter extends React.Component {
           <div className="cheer">{this.state.cheer}</div>
         </div>
         <div>
-          {this.state.newArr.map(memoryCard => (
-            <GameCard
-              id={memoryCard.id}
-              key={memoryCard.id}
-              image1={memoryCard.image1}
-              name={memoryCard.name}
-              handleClick={this.handleClick}
+          {this.state.endGame ? (
+            <EndGame
+              winner={this.state.winner} 
+              newGame={this.newGame}
             />
-          ))}
+            ) : (
+            <div>
+              {this.state.newArr.map(memoryCard => (
+                <GameCard
+                  id={memoryCard.id}
+                  key={memoryCard.id}
+                  image1={memoryCard.image1}
+                  name={memoryCard.name}
+                  handleClick={this.handleClick}
+                />
+              ))}
+            </div>
+          )}
         </div>
         <div style={{clear: "both"}}></div>
       </div>
