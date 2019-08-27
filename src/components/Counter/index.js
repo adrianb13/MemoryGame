@@ -108,7 +108,7 @@ class Counter extends React.Component {
               newGame={this.newGame}
             />
             ) : (
-            <div>
+            <div className="gamebox">
               {this.state.newArr.map(memoryCard => (
                 <GameCard
                   id={memoryCard.id}

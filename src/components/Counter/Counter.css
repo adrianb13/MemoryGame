@@ -35,3 +35,21 @@
   margin: 7px auto 6px auto;
   width: 80%;
 }
+.gamebox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+@media (max-width: 650px) {
+  .score {
+    width: 45%;
+    font-size: 80%;
+  }
+  .cheer {
+    font-size: 100%;
+  }
+  .scoreboard {
+    width: 100%;
+  }
+}

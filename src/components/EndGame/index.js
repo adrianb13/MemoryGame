@@ -4,7 +4,7 @@ import "./Endgame.css";
 class EndGame extends React.Component {
   render () {
     return (
-      <div>
+      <div className="endPad">
         {this.props.winner ? ( 
           <div className="winner"
             onClick={() => this.props.newGame()}>
