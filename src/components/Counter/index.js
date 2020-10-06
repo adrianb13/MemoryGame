@@ -52,27 +52,10 @@ class Counter extends React.Component {
     if (checkCard[0] !== currCard[0].id) {
       this.setState({
         score: this.state.score + 1
+      }, () => {
+        clickedCards.push(currCard[0].id);
+        this.endGame();
       });
-      clickedCards.push(currCard[0].id);
-
-      if (this.state.score === 12) {
-        this.setState({
-          cheer: "You WIN!!! You Got ALLLLL The Minions!!!",
-          endGame: true,
-          winner: true
-        })
-      } else if (this.state.score < 12) {
-        this.setState({
-          cheer: "Nice Choice! Pick Again!"
-        })
-      }
-
-      if (this.state.score >= this.state.highScore) {
-        this.setState({
-          highScore: this.state.score +1
-        });
-      };
-      
     } else if (checkCard[0] === currCard[0].id) {
       this.setState({
         score: 0,
@@ -83,6 +66,26 @@ class Counter extends React.Component {
     };
     this.randomizer(this.state.newArr);
   };
+
+  endGame = () => {
+    if (this.state.score === 12) {
+      this.setState({
+        cheer: "You WIN!!! You Got ALLLLL The Minions!!!",
+        endGame: true,
+        winner: true
+      })
+    } else if (this.state.score < 12) {
+      this.setState({
+        cheer: "Nice Choice! Pick Again!"
+      })
+    }
+
+    if (this.state.score >= this.state.highScore) {
+      this.setState({
+        highScore: this.state.score +1
+      });
+    };
+  }
 
   newGame = () => {
     this.setState({
